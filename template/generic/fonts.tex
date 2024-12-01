@@ -6,6 +6,7 @@
 %----------------------------------------------------------------------------------------
 
 \usepackage{microtype}
+\microtypesetup{protrusion=false}
 
 %----------------------------------------------------------------------------------------
 %   ADD BOLD + ITALIC
@@ -21,6 +22,17 @@
     BoldItalicFont = *-BoldItalic.otf
 ]{Inconsolata-LGC}
 
+\newfontfamily\timesnewromanfontfamily[
+    NFSSFamily=TimesNewRoman,% <--- the key
+    Path=template/generic/fonts/timeNewRoman/,
+    Extension = .ttf,
+    Ligatures = TeX,
+    UprightFont = *-Regular,
+    BoldFont = *-Bold,
+    ItalicFont = *-Italic,
+    BoldItalicFont = *-BoldItalic,
+]{Times-new-roman}
+
 %----------------------------------------------------------------------------------------
 %   FAMILY DEFAULTS
 %----------------------------------------------------------------------------------------
@@ -32,4 +44,4 @@
 %   HEADINGS
 %----------------------------------------------------------------------------------------
 
-\let\headingfontfamily\inconsolatafontfamily
+\let\headingfontfamily\timesnewromanfontfamily
