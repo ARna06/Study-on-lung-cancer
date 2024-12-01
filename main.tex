@@ -1,0 +1,46 @@
+\begin{document}
+
+% =======================================================================================
+%\cleardoublepage % Forces the first chapter to start on an odd page so it's on the right
+
+% =======================================================================================
+%                                   PREAMBLE
+% =======================================================================================
+\coverpage{\TITLE}{\SUBTITLE}{\AUTHOR}{\DATE}{\SUBJECT}
+%----------------------------------------------------------------------------------------
+\newpage
+\fpage
+\newpage
+
+\tableofcontents
+
+
+\part{Introduction}
+\chapter{General Descriptions}
+\input{section/01Description}
+
+\chapter{Types of Lung Cancer}
+\input{section/02Types}
+
+\chapter{Stages of Lung Cancer}
+\input{section/03Stages}
+
+\part{Prevention}
+\chapter{Symptoms of Lung Cancer}
+\input{section/04Symptoms}
+
+\chapter{Diagnosis and Treatment}
+\input{section/05Diagnosis&T}
+
+\part{Statistics}
+\chapter{Management and Treatment}
+\input{section/06Management&T}
+
+\chapter{Statistics of Lung Cancer}
+\input{section/07StatisticsLC}
+
+\part{Appendices}
+\listoffigures
+\newpage\printbibliography[title = {References}]
+
+\end{document}

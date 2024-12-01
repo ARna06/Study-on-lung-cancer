@@ -1,0 +1,73 @@
+\newcommand{\fpage}{
+
+\pagestyle{empty}
+\newgeometry{left=0cm,top=0cm,right=0cm,bottom=0cm}
+
+\begin{tikzpicture}[remember picture, overlay]
+
+\pgfdeclarelayer{bg}
+\pgfdeclarelayer{fg}    
+\pgfsetlayers{bg,main,fg} 
+
+\begin{pgfonlayer}{bg}
+     \node[opacity=1,inner sep=0pt] at (current page.center) {\includegraphics[width=\paperwidth,height=\paperheight]{images/Front-Page-BG.pdf}
+  };
+\end{pgfonlayer}
+
+\begin{pgfonlayer}{fg}
+    \node[opacity=1,inner sep=10pt] at (5,-7){\includegraphics[width=6cm,height=9cm]{images/ISI_Logo.pdf}};
+
+    \drawtext%
+    {A Terse Study on Lung Cancer}%
+    {$(current page.east)+(-2,1.5)$}%
+    {2cm}%
+    {0}%
+    {anchor=east,text=fg,align=right,font=\fontsize{48}{16}\headingfontfamily\bfseries};
+
+    \drawtext%
+    {Lung cancer is one of the leading causes of cancer-related mortality worldwide, \\characterized by uncontrolled cell growth in lung tissues.}%
+    {$(current page.east)+(-2,-0.9)$}%
+    {6cm}%
+    {0}%
+    {anchor=east,text=fg,align=right,font=\fontsize{10}{10}\headingfontfamily};
+
+    \drawtext%
+    {Abhik Rana (BS2301)\\ Arikith Roy Chowdhury (BS2314)\\ Kirit Maitra (BS2329)\\Pallav Sahay(BS2335)\\Rahul Ganguly (BS2337)\\Vinayak Tripathi (BS2356)}%
+    {$(current page.west)+(2,-4.5)$}%
+    {6cm}%
+    {0}%
+    {anchor=west,text=fg,align=left,font=\fontsize{16}{16}\headingfontfamily\bfseries};
+
+    \drawtext%
+    {Supervisor: \textbf{Suparna Mandal Biswas}}%
+    {$(current page.west)+(2,-7.5)$}%
+    {6cm}%
+    {0}%
+    {anchor=west,text=fg,align=left,font=\fontsize{16}{16}\headingfontfamily};
+
+    \drawtext%
+    {Associate Professor, AERU, Indian Statistical Institute, Kolkata}%
+    {$(current page.west)+(5,-8)$}%
+    {6cm}%
+    {0}%
+    {anchor=west,text=fg,align=left,font=\fontsize{8}{16}\headingfontfamily};
+
+    \drawtext%
+    {Project submitted as a part of evaluation of molecular biology course for \\Bachelor's of Statistics degree.}%
+    {$(current page.west)+(2,-10)$}%
+    {6cm}%
+    {0}%
+    {anchor=west,text=fg,align=left,font=\fontsize{8}{10}\headingfontfamily};
+
+    \drawtext%
+    {Kolkata, November, 2024}%
+    {$(current page.west)+(2,-13)$}%
+    {6cm}%
+    {0}%
+    {anchor=west,text=fg,align=left,font=\fontsize{6}{10}\headingfontfamily};
+\end{pgfonlayer}
+
+
+\end{tikzpicture}
+\restoregeometry
+}
